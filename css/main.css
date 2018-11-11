@@ -1,0 +1,217 @@
+* {
+    font-family: ‘American Typewriter’, ‘Courier New’, Courier, Monaco, mono;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navigation, .row, .left-nav, .logo, .right-nav, li, a, h1 {
+    //border: 1px dotted red;
+}
+
+body {
+    background: url(../assets/images/paper.png);
+}
+
+.main {
+    min-height: 74vh;
+}
+
+p, .works-list {
+    font-size: 1.5em;
+}
+
+p.center {
+    text-align: center;
+}
+
+p.stupid-text {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.red-italics {
+    color: #fc3645;
+    font-style: italic;
+}
+
+a {
+    color: #fc3645;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #fc3645;
+    cursor: pointer;
+}
+
+a:visited {
+    color: #fc3645;
+}
+
+img {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+img:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.navigation {
+    color: black;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.logo {
+    color: #fc3645;
+}
+
+.logo h1 {
+    font-weight: 700;
+    font-size: 3.4em;
+    margin: 0px;
+}
+
+ul.nav-links {
+    list-style: none;
+    padding: 15px 0;
+    margin: 0;
+    min-width: 233px;
+}
+
+ul.nav-links li {
+    display: inline;
+    margin: 10px;
+}
+
+ul.nav-links a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    transition: .8s ease;
+}
+
+ul.nav-links a:hover {
+    color: #fc3645;
+    transition: .2s ease;
+}
+
+ul.sitemap-list {
+    font-size: 1.5em;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.section {
+    width: 70%;
+    margin: auto;
+}
+
+.material {
+    color: white;
+    padding: 20px;
+    background-color: #2B2B2B;
+    margin: 20px 0 20px 0;
+    -webkit-box-shadow: 0px 7px 15px -6px rgba(0, 0, 0, 0.50);
+    -moz-box-shadow: 0px 7px 15px -6px rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 7px 15px -6px rgba(0, 0, 0, 0.50);
+}
+
+.material h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.material p {
+    margin-top: 10px;
+    color: #abb2bf;
+}
+
+div.image-book {
+    height: 800px;
+    background: url(../assets/images/pilgrimage-book-cover.JPG);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: none;
+    background-size: cover;
+}
+
+div.space {
+    height: 400px;
+}
+
+.material.works {
+    padding: 10px 0px 10px 0;
+}
+
+.material.works h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+ul.works-list {
+    text-align: center;
+    list-style: none;
+    color: #abb2bf;
+}
+
+ul.works-list li {
+    padding: 10px;
+}
+
+ul.works-list li:nth-child(odd) {
+    background-color: #2f2f2f;
+}
+
+span.glyphicon {
+    color: #fc3645;
+}
+
+.footer {
+    font-size: .6em;
+    text-align: center;
+    width: 100%;
+    padding: 30px 0 30px 0;
+    background-color: #2B2B2B;
+    color: white;
+}
+
+div.newsblock {
+    margin: 10px 0px 20px 0px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    padding: 10px;
+    background-color: #222222;
+    border-radius: 5px;
+}
+
+div.newsblock:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+p.timestamp {
+    font-size: 14px;
+}
+
+.footer p:nth-child(1), .footer p:nth-child(2), .footer p:nth-child(3) {
+    display: inline;
+}
+
+
+/*media queries*/
+
+@media (max-width: 800px) {
+    .section {
+        width: 98%;
+        margin: auto;
+    }
+    img {
+        margin-bottom: 10px;
+    }
+}
