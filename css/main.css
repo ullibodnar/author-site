@@ -169,7 +169,7 @@ ul.works-list li:nth-child(odd) {
     background-color: #2f2f2f;
 }
 
-span.glyphicon {
+span.glyphicon.bottom {
     vertical-align: text-bottom;
 }
 
@@ -178,7 +178,7 @@ span.glyphicon.accent {
 }
 
 .footer {
-    font-size: .9em;
+    font-size: .6em;
     text-align: center;
     width: 100%;
     padding: 30px 0 30px 0;
@@ -220,7 +220,7 @@ p.timestamp {
     font-size: 14px;
 }
 
-.footer p:nth-child(1), .footer p:nth-child(2), .footer p:nth-child(3) {
+.footer p:nth-child(2) {
     display: inline;
 }
 
