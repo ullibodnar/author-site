@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,58 +23,164 @@
 
 <body>
   <div class="navigation">
-    <div class="row">
-      <div class="left-nav col-md-3">
-        <ul class="nav-links">
-          <li><a href="../">Home</a></li>
-          <li><a href="../about/">About</a></li>
-        </ul>
-      </div>
-      <div class="logo col-md-6">
+    <div class="left-nav">
+      <div class="logo">
         <h1>Michael Dudley</h1>
       </div>
-      <div class="right-nav col-md-3">
-        <ul class="nav-links">
-          <li><a href="../contact/">Contact</a></li>
-          <li><a href="#">Works</a></li>
-        </ul>
-      </div>
+    </div>
+
+    <div class="right-nav">
+      <ul class="nav-links">
+        <li><a href="../">Home</a></li>
+        <li><a href="../about/">About</a></li>
+        <li><a href="../contact/">Contact</a></li>
+        <li class="active"><a href="#">Works & Publications</a></li>
+      </ul>
+    </div>
+    <div class='nav-toggle'>
+      <span class='nav-line left'></span>
+      <span class='nav-word middle'>menu</span>
+      <span class='nav-line right'></span>
     </div>
   </div>
   <div class="main">
     <div class="main-content">
       <div class="section">
-        <div class="material about-main works">
+        <div class="tab_switcher">
+          <div class="tab_wrapper">
+            <button class="tab active" id="works-tab">Works</button>
+            <button class="tab" id="publications-tab">Publications</button>
+          </div>
+        </div>
+        <div class="material works">
           <h1>Works:</h1>
           <ul class="works-list">
-            <li><em>Nature, Etc</em>., Bug Press, Guelph, 1977</li>
-            <li><em>Roasted Chestnuts</em>, High/Coo Press, Battle Ground, 1979</li>
-            <li><em>On a Ledge of Light</em>, Swamp Press, Oneonta, 1980</li>
-            <li><em>To the Editor, Letters</em>, Gronk Press, Toronto, 1982</li>
-            <li><em>Through the Green Fuse</em>, High/Coo Press, 1983</li>
-            <li><em>Series Three through Six</em>, Wind Chimes Press, Glen Burnie, 1986</li>
-            <li><em>A Man in a Motel Room</em>, High/Coo Press, 1986</li>
-            <li><em>Broadside Series Winner</em>, The Red Pagoda, 1987</li>
+            <li><em>NEXUS haiku</em> (with Tomislav Maretić and Dejan Pavlinović), Pula, Croatia, 2021</li>
+            <li><em>From Kanata Canada</em>, Haiku Canada Sheet, 2017</li>
+            <li><em>Pilgrimage</em>, Red Moon Press, Winchester, 2005 and (revised and expanded) 2017</li>
+            <li><em>Adding Up</em>, pawEprint, Napanee, 2004</li>
+            <li><em>Uproar</em>, Haiku Canada Sheet, 2004</li>
+            <li><em>Returning</em>, Proof Press, 1996</li>
+            <li><em>Searching the Shore</em> (with Elizabeth St Jacques), Proof Press, 1996</li>
             <li><em>Car Won't Start</em> (with Dorothy Howard), Proof Press, Aylmer, 1995</li>
             <li><em>Through the Ha8z</em> (with Dorothy Howard), Proof Press, 1995</li>
             <li><em>Growing through the Dark</em>, King's Road Press, Pointe Claire, 1995</li>
-            <li><em>Searching the Shore</em> (with Elizabeth St Jacques), Proof Press, 1996</li>
-            <li><em>Returning</em>, Proof Press, 1996</li>
-            <li><em>Uproar</em>, Haiku Canada Sheet, 2004</li>
-            <li><em>Adding Up</em>, pawEprint, Napanee, 2004</li>
-            <li><em>Pilgrimage</em>, Red Moon Press, Winchester, 2005 and revised and expanded 2017</li>
-            <li><em>From Kanata Canada</em>, Haiku Canada Sheet, 2017</li>
+            <li><em>Broadside Series Winner</em>, The Red Pagoda, 1987</li>
+            <li><em>A Man in a Motel Room</em>, High/Coo Press, 1986</li>
+            <li><em>Series Three through Six</em>, Wind Chimes Press, Glen Burnie, 1986</li>
+            <li><em>Through the Green Fuse</em>, High/Coo Press, 1983</li>
+            <li><em>To the Editor, Letters</em>, Gronk Press, Toronto, 1982</li>
+            <li><em>On a Ledge of Light</em>, Swamp Press, Oneonta, 1980</li>
+            <li><em>Roasted Chestnuts</em>, High/Coo Press, Battle Ground, 1979</li>
+            <li><em>Nature, Etc</em>., Bug Press, Guelph, 1977</li>
           </ul>
+        </div>
+        <div class="material publications hidden">
+          <h1>Recent Publications:</h1>
+          <h3>Anthologies</h3>
+          <ul class="works-list">
+            <li><em>Dylan Day E-Booklet Anthology</em>, April 30, 2021</li>
+            <li><em>Haiku Crush Online Anthology</em>, 2021</li>
+            <li><em>Kyoto X Haiku Project</em>, Online, April, 2021</li>
+            <li><em>Samoborski</em>, #28, Matica Hrvatska, 2021</li>
+            <li><em>Paper Mountains</em>, Haiku Northwest, 2021</li>
+            <li><em>Bundled Wildflowers</em>, Haiku Society of America, 2020</li>
+            <li><em>The Haiku Calendar 2021</em>, Snapshot Press, 2020</li>
+            <li><em>The Helping Hand Haiku Anthology</em>, Middle Island Press, 2020</li>
+            <li><em>Moonlight Haiku Challenge</em>, E-Book Anthology, Consulate General of Japan, Toronto, 2020</li>
+            <li><em>Moving Forward</em>, Trillium Group, Haiku Canada, 2020</li>
+            <li><em>Rattled</em>, Bicadeideias, 2020</li>
+            <li><em>The Signature Haiku Anthology</em>, Middle Island Press, 2020</li>
+            <li><em>Smoke from my Candle</em>, Haiku Canada, 2020</li>
+            <li><em>TRIVENI Haiku Calendar 2021</em>, INhaiku, 2020</li>
+            <li><em>The Wanderer Brush</em>, Red Moon Press, 2020</li>
+            <li><em>World Haiku Association Anthology</em>, Coal Stack Publishing Company, 2020</li>
+
+          </ul>
+          <br />
+          <h3>Print Journals</h3>
+          <div class="journals-wrapper">
+            <div class='journal-name'><em>Acorn</em></div>
+            <div class='journal-name'><em>Akitsu Quarterly</em></div>
+            <div class='journal-name'><em>Asahi Haikuist Network</em></div>
+            <div class='journal-name'><em>Bottle Rockets</em></div>
+            <div class='journal-name'><em>Butterfly Dreams</em></div>
+            <div class='journal-name'><em>Casopis Za</em></div>
+            <div class='journal-name'><em>ephemerae</em></div>
+            <div class='journal-name'><em>Free XpreSsion</em></div>
+            <div class='journal-name'><em>Frogpond</em></div>
+            <div class='journal-name'><em>Haiku 4</em></div>
+            <div class='journal-name'><em>Haiku Canada Review</em></div>
+            <div class='journal-name'><em>Haiku Letter</em></div>
+            <div class='journal-name'><em>Haiku Zbornik</em></div>
+            <div class='journal-name'><em>Kingfisher</em></div>
+            <div class='journal-name'><em>Modern Haiku</em></div>
+            <div class='journal-name'><em>Presence</em></div>
+            <div class='journal-name'><em>The Heron's Nest</em></div>
+          </div>
+          <br />
+          <h3>Online Sites</h3>
+          <div class="journals-wrapper">
+            <div class='journal-name'><em>Autumn Moon Haiku Journal</em></div>
+            <div class='journal-name'><em>Bloo Outlier Journal</em></div>
+            <div class='journal-name'><em>Cattails</em></div>
+            <div class='journal-name'><em>European Kukai</em></div>
+            <div class='journal-name'><em>Failed Haiku</em></div>
+            <div class='journal-name'><em>"Haiku Dialogue," The Haiku Foundation</em></div>
+            <div class='journal-name'><em>"Haiku Music Challenge" #70, The Haiku Foundation</em></div>
+            <div class='journal-name'><em>Heliosparrow</em></div>
+            <div class='journal-name'><em>Naviar Haiku 361, Naviar Records</em></div>
+            <div class='journal-name'><em>NeverEnding Story, "Butterfly Dreams"</em></div>
+            <div class='journal-name'><em>NOON</em></div>
+            <div class='journal-name'><em>The Society</em></div>
+            <div class='journal-name'><em>Under the Basho</em></div>
+            <div class='journal-name'><em>World Haiku Review</em></div>
+          </div>
+          <h3>Podcasts</h3>
+          <div class="journals-wrapper">
+            <div class='journal-name'><em>Poetry Pea</em></div>
+          </div>
+          <!-- 
+          <h3>YouTube Videos</h3>
+          <div class="journals-wrapper">
+
+            <div class="video-wrapper">
+              <a href="https://www.youtube.com/watch?v=WvGTRteWSFw" class="video-link" target="_blank">
+                <img src='https://img.youtube.com/vi/WvGTRteWSFw/mqdefault.jpg' class="video-image" />
+                <h4 class="video-title">Easter Monday</h4>
+              </a>
+            </div>
+
+
+            <div class="video-wrapper">
+              <a href="https://www.youtube.com/watch?v=n3FQ65bbArE" class="video-link" target="_blank">
+                <img src='https://img.youtube.com/vi/n3FQ65bbArE/mqdefault.jpg' class="video-image" />
+                <h4 class="video-title">First Son Fishes</h4>
+              </a>
+            </div>
+
+            <div class="video-wrapper">
+              <a href="https://www.youtube.com/watch?v=W3rFPkBGIyg" class="video-link" target="_blank">
+                <img src='https://img.youtube.com/vi/W3rFPkBGIyg/mqdefault.jpg' class="video-image" />
+                <h4 class="video-title">Sidewalk Ice</h4>
+              </a>
+            </div>
+-->
         </div>
       </div>
     </div>
   </div>
   <div class="footer">
-    <p>Copyright </p><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>
-    <p>Michael Dudley 2017.</p>
+    <span class="glyphicon glyphicon-copyright-mark accent" aria-hidden="true"></span>
+    <p>Michael Dudley
+      <script>document.write(new Date().getFullYear())</script>.
+    </p>
     <p>Website designed and maintained by Ulli Bodnar.</p>
-    <a href="../sitemap">Sitemap</a>
+    <a href="../sitemap/">Sitemap</a>
   </div>
+
+  <script src='../js/main.js'></script>
+  <script src='../js/works.js'></script>
   <!-- jQuery first, then Tether, then Bootstrap JS. -->
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
     integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"

@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,22 +24,24 @@
 
 <body>
   <div class="navigation">
-    <div class="row">
-      <div class="left-nav col-md-3">
-        <ul class="nav-links">
-          <li><a href="../">Home</a></li>
-          <li><a href="../about/">About</a></li>
-        </ul>
-      </div>
-      <div class="logo col-md-6">
+    <div class="left-nav">
+      <div class="logo">
         <h1>Michael Dudley</h1>
       </div>
-      <div class="right-nav col-md-3">
-        <ul class="nav-links">
-          <li><a href="#">Contact</a></li>
-          <li><a href="../works/">Works</a></li>
-        </ul>
-      </div>
+    </div>
+
+    <div class="right-nav">
+      <ul class="nav-links">
+        <li><a href="../">Home</a></li>
+        <li><a href="../about/">About</a></li>
+        <li class="active"><a href="#">Contact</a></li>
+        <li><a href="../works/">Works & Publications</a></li>
+      </ul>
+    </div>
+    <div class='nav-toggle'>
+      <span class='nav-line left'></span>
+      <span class='nav-word middle'>menu</span>
+      <span class='nav-line right'></span>
     </div>
   </div>
   <div class="main">
@@ -38,9 +49,11 @@
       <div class="section">
         <div class="material contact">
           <h1>Contact:</h1>
-          <p class="stupid-text">To communicate a message or order <span class="red-italics">pilgrimage</span> ($20),
+          <p class="stupid-text">To communicate a message or order <span class="red-italics">pilgrimage</span> or <span
+              class="yellow-italics">NEXUS
+              haiku</span>,
             please fill in the form below:</p>
-          <form method="POST" action="http://formspree.io/mandalakoan@hotmail.com">
+          <form method="POST" action="https://formspree.io/f/xwkajaag">
             <div class="field">
               <input type="text" id="fname" name="firstname" placeholder="First Name" required>
             </div>
@@ -48,7 +61,7 @@
               <input type="text" id="lname" name="lastname" placeholder="Last Name" required>
             </div>
             <div class="field">
-              <input type="email" id="email" name="email" placeholder="Email Address" required>
+              <input type="email" id="email" name="_replyto" placeholder="Email Address" required>
             </div>
             <div class="field">
               <textarea type="text" id="mesg" name="message" placeholder="Message" required></textarea>
@@ -63,10 +76,14 @@
   </div>
   <div class="footer">
     <span class="glyphicon glyphicon-copyright-mark accent" aria-hidden="true"></span>
-    <p>Michael Dudley 2017.</p>
+    <p>Michael Dudley
+      <script>document.write(new Date().getFullYear())</script>.
+    </p>
     <p>Website designed and maintained by Ulli Bodnar.</p>
     <a href="../sitemap">Sitemap</a>
   </div>
+  <script src='../js/main.js'></script>
+  <script src='../js/works.js'></script>
   <!-- jQuery first, then Tether, then Bootstrap JS. -->
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
     integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"

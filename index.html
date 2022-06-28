@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,29 +22,35 @@
 </head>
 
 <body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0"
+    nonce="J99DWo5B"></script>
+
   <div class="navigation">
-    <div class="row">
-      <div class="left-nav col-md-3">
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="about/">About</a></li>
-        </ul>
-      </div>
-      <div class="logo col-md-6">
+    <div class="left-nav">
+      <div class="logo">
         <h1>Michael Dudley</h1>
       </div>
-      <div class="right-nav col-md-3">
-        <ul class="nav-links">
-          <li><a href="contact/">Contact</a></li>
-          <li><a href="works/">Works</a></li>
-        </ul>
-      </div>
+    </div>
+
+    <div class="right-nav">
+      <ul class="nav-links">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="about/">About</a></li>
+        <li><a href="contact/">Contact</a></li>
+        <li><a href="works/">Works & Publications</a></li>
+      </ul>
+    </div>
+    <div class='nav-toggle'>
+      <span class='nav-line left'></span>
+      <span class='nav-word middle'>menu</span>
+      <span class='nav-line right'></span>
     </div>
   </div>
   <div class="main">
     <div class="main-content">
       <div class="section">
-        <!-- Nexus Modal -->
+        <!-- Buciada haiku meeting modal -->
         <div class="modal fade" id="nexusModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -209,24 +224,135 @@
           </div>
         </div>
 
+        <!-- Where to buy modal -->
+        <div class="modal fade" id="whereToBuy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Order Now</h4>
+              </div>
+              <div class="modal-body">
+
+                <div class="row">
+                  <div class="col-md-4">
+                    <img class="material-image" src='assets/images/nexus-book-cover-small.jpg' width="100%" />
+                    <h3 style="text-align: center;">NEXUS haiku</h3>
+
+                  </div>
+                  <div class="col-md-8">
+                    <h2 class="no-margin">Where to purchase:</h2>
+
+                    <small class="dark"><em>NEXUS haiku</em> can be ordered directly from Amazon.</small>
+
+
+                    <p>
+                      <strong>Ordering from Amazon:</strong>
+                    </p>
+                    <p>
+                      Follow <a
+                        href="https://www.amazon.ca/NEXUS-haiku-Dejan-Pavlinovi%C4%87/dp/9535923315/ref=sr_1_1?crid=9MVUDAV9WHZ5&keywords=nexus+haiku&qid=1644781122&sprefix=nexus+haiku%2Caps%2C166&sr=8-1"
+                        target="_blank">this link</a> to order from Amazon.
+                    </p>
+                    <br>
+
+                    <small class="dark">Or, for ordering direct from the authors:</small>
+                    <p>
+                      <strong>Ordering from North America:</strong>
+                    </p>
+                    <p>
+                      <em>NEXUS haiku</em> can be ordered by contacting Michael Dudley directly: <a
+                        href="contact/">form.</a>
+                    </p>
+                    <br>
+
+                    <p>
+                      <strong>Ordering from Other Continents:</strong>
+                    </p>
+                    <p>
+                      <em>NEXUS haiku</em> can be ordered by contacting Dejan Pavlinović directly: <a
+                        href="https://www.facebook.com/NEXUShaiku/" target="_blank">facebook page.</a>
+                    </p>
+
+                  </div>
+                </div>
+
+                <br>
+
+                <p><strong>Price: </strong>$17 CAD + tax & $6 shipping (approximately) within Canada. Price, postal
+                  rates, and tax will vary for
+                  orders outside of Canada.</p>
+                <p><strong>Pages: </strong>120</p>
+                <p><strong>Size: </strong>10 1/2" x 7 1/4"</p>
+                <p><strong>ISBN: </strong>97895359233-1-2</p>
+
+                <br>
+                <br>
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="material announcements">
-          <h1>Announcements: 1-9</h1>
-          <div class='scrollableannouncements'>
-            <div class="announcementsblock expand">
+          <h1>Announcements:</h1>
+          <button class='transparent expand-button'>
+            <span id='expand-text'>Expand</span> <span class='glyphicon glyphicon-plus-sign bottom'
+              aria-hidden="true"></span>
+          </button>
+          <div class='scrollableannouncements collapsed'>
+            <div class="announcementsblock">
               <p>
-                <span class="red-italics">Buciada Haiku Meeting</span>, Ivanic-Grad, Croatia: Group Reading of
+                <span class="red-italics"><a href="https://haiku.mannlib.cornell.edu/category/author/michael-dudley/"
+                    target="_blank">Featured Author, "Mann Library Daily Haiku," Cornell
+                    University,</a></span> <br>January 1
+                - 31, 2022.
+              </p>
+            </div>
+            <div class="announcementsblock">
+              <p>
+                <span class="yellow-italics">NEXUS haiku</span> is the winner of the 2021 “Borivoj Bukva
+                Award,”
+                for best haiku collection published in Croatia, presented by the Croatian Literary Society, Rijeka,
+                Croatia on November 6, 2021.
+              </p>
+            </div>
+            <div class="announcementsblock">
+              <p>
+                <span class="yellow-italics">NEXUS haiku</span>, volume of cross-cultural, bilingual haiku, senryu,
+                sequences, and rengay, co-written with
+                Tomislav Maretić and Dejan Pavlinović, published in Pula, Croatia, October 2021.
+              </p>
+              <small>Available online from <a
+                  href="https://www.amazon.ca/NEXUS-haiku-Dejan-Pavlinovi%C4%87/dp/9535923315/ref=sr_1_1?crid=9MVUDAV9WHZ5&keywords=nexus+haiku&qid=1644781122&sprefix=nexus+haiku%2Caps%2C166&sr=8-1"
+                  target="_blank" class="yellow">Amazon Books</a></small>
+            </div>
+            <div class="announcementsblock">
+              <p>
+                <span class="red-italics">HaikuLife 2021 The Haiku Foundation and YouTube:</span> Video Haiga by Mel and
+                Michael Dudley: "Easter Monday," "Sidewalk Ice," and "<a
+                  href="https://thehaikufoundation.org/haikulife-the-haiku-foundation-video-project/haikulife-2021/#n3FQ65bbArE"
+                  target="_blank">First Son Fishes</a>"
+              </p>
+            </div>
+            <div class="announcementsblock">
+              <p>
+                <span class="red-italics">Buciada Haiku Meeting, October 2019</span>, Ivanic-Grad, Croatia: Group
+                Reading of
                 cross-cultural, collaborative
                 "Nexus
-                Haiku," October 2019
+                Haiku"
               </p>
-              <button class='see-more' data-toggle="modal" data-target="#nexusModal">
+              <button class='transparent' data-toggle="modal" data-target="#nexusModal">
                 See more <span class='glyphicon glyphicon-plus-sign bottom' aria-hidden="true"></span>
               </button>
             </div>
             <div class="announcementsblock">
               <p>
                 <span class="red-italics">Zagreb Literary Talks</span>, Zagreb, Croatia: Lecture entitled "Reciprocal
-                Synthesis," to be published in <em>Most/The Bridge</em> and <em>Republika</em>, Croatian Writers'
+                Synthesis," published in <em>Most/The Bridge</em>, Croatian Writers'
                 Association, October
                 2019
               </p>
@@ -246,16 +372,11 @@
             </div>
             <div class="announcementsblock">
               <p>
-                <span class="red-italics">Gradska Radionica</span>, Pula, Croatia: Writer in Residence; Group
-                Performance of cross-cultural,
-                integrated arts project, "Synergy Ensemble," November 2018
-              </p>
-            </div>
-            <div class="announcementsblock">
-              <p>
-                <span class="red-italics">Buciada Haiku Meeting</span>, Ivanic-Grad, Croatia: Address entitled "In
+                <span class="red-italics">Buciada Haiku
+                  Meeting, October 2018</span>, Ivanic-Grad, Croatia: Address
+                entitled "In
                 Praise
-                of Gourds and Haiku," published in <em>Iris</em>, October 2018
+                of Gourds and Haiku," published in <em>Iris</em>, October 2019
               </p>
             </div>
             <div class="announcementsblock">
@@ -266,30 +387,88 @@
             </div>
             <div class="announcementsblock">
               <p>
-                <span class="red-italics">From Kanata Canada</span>, published as a <a
-                  href="http://www.haikucanada.org/">Haiku Canada</a> Sheet, 2017
+                <span class="red-italics"><a
+                    href=" http://kulturistra.hr/lang/it/2018/11/druzenje-s-umjetnicima-u-gradskoj-radionici-the-synergy-ensemble/"
+                    target="_blank">Gradska Radionica</a></span>, Pula, Croatia: Writer in Residence; Group Performance
+                of cross-cultural, integrated arts project, "Synergy Ensemble," November 2018 </p>
+            </div>
+            <div class="announcementsblock">
+              <p>
+                <span class="red-italics">From Kanata Canada</span>, published as a Haiku Canada Sheet, 2017
               </p>
             </div>
             <div class="announcementsblock">
               <p>
-                <span class="red-italics">pilgrimage</span>, volume of selected haiku, published by <a
-                  href="http://www.redmoonpress.com" target="_blank">Red Moon Press</a>, 2017
+                <span class="red-italics">pilgrimage</span>, volume of selected haiku, published by Red Moon Press, 2017
               </p>
-              <a href="https://www.redmoonpress.com/catalog/product_info.php?cPath=32&products_id=35">Order Now</a><span
-                class="glyphicon glyphicon-chevron-right" aria-hidden="true" target="_blank"></span>
+              <small class='small-text'>Available online from <a target="_blank"
+                  href="https://redmoonpress.com/product/strongipilgrimageistrong-haiku-by-michael-dudley/">Red Moon
+                  Press</a> and <a href="https://www.amazon.ca/pilgrimage-haiku-Michael-Dudley/dp/1947271059"
+                  target="_blank">Amazon Books</a></small>
             </div>
+          </div>
+        </div>
+
+        <div class="pilgrimage material">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="material-image" id='front-image' src=" assets/images/nexus-book-cover-small.jpg"
+                alt="pilgrimage novel" style="height: auto; width: 100%;">
+              <img class="material-image hidden" id='back-image' src=" assets/images/nexus-book-back-small.jpg"
+                alt="pilgrimage novel" style="height: auto; width: 100%;">
+              <div class="image-switcher-buttons">
+                <button class='btn active' id='front-button'>Front</button>
+                <button class='btn' id='back-button'>Back</button>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <h1 class="yellow-italics">NEXUS haiku</h1>
+              <small class="small-text">Newest release (2021)</small>
+
+              <p>
+                <em>NEXUS haiku</em> is a co-authored, cross-cultural, bilingual collection of 85 stand-alone
+                haiku and senryu, five sequences, and five rengay that were equally co-created,
+                composed collaboratively in person and online from October 2018 - August 2021.
+              </p>
+              <p>
+                In the foreword, Sanela Pli&scaron;ko states that the volume is a "journey through
+                seasons, villages and towns, seas and mountains, from which one can read a combination of the
+                authors'
+                experiences as if they lived one life."
+              </p>
+
+
+              <p>
+                The book includes expressive artwork by Nina &Scaron;estanovi&cacute;: a vibrant, full-colour front
+                cover and
+                thematically
+                related, minimalist interior sketches.
+              </p>
+
+              <a class="yellow" data-toggle="modal" data-target="#whereToBuy">Order Now</a><span
+                class="glyphicon glyphicon-chevron-right accent-yellow" aria-hidden="true"></span>
+              <br>
+              <br>
+              <div class="fb-like" data-href="https://www.facebook.com/NEXUShaiku" data-width=""
+                data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+              <br>
+              <small>Like NEXUS haiku on Facebook!</small>
+
+            </div>
+
           </div>
         </div>
         <div class="pilgrimage material">
           <div class="row">
             <div class="col-md-4">
-              <img src="assets/images/pilgrimage-book-cover.jpg" alt="pilgrimage novel"
+              <img class="material-image" src=" assets/images/pilgrimage-book-cover-small.jpg" alt="pilgrimage novel"
                 style="height: auto; width: 100%;">
             </div>
             <div class="col-md-8">
               <h1 class="red-italics">pilgrimage</h1>
               <p>
-                Melodic and luminous, insightfully humorous, continuously wondrous &mdash; the evocative and provocative
+                Melodic and luminous, insightfully humorous, continuously wondrous &mdash; the evocative and
+                provocative
                 haiku of <em>pilgrimage</em> lead the reader on a compelling, encompassing journey of body, mind, and
                 spirit. Selected from his 15
                 previous collections, including some of his earliest work and many of his most recent poems,
@@ -299,6 +478,11 @@
               <p>
                 Foreword by Richard R. Powell.<br> Wood Engravings by Wesley W. Bates.
               </p>
+
+              <a href="https://redmoonpress.com/product/strongipilgrimageistrong-haiku-by-michael-dudley/"
+                target="_blank">Order Now</a><span class="glyphicon glyphicon-chevron-right accent"
+                aria-hidden="true"></span>
+
             </div>
           </div>
         </div>
@@ -307,7 +491,9 @@
   </div>
   <div class="footer">
     <span class="glyphicon glyphicon-copyright-mark accent" aria-hidden="true"></span>
-    <p>Michael Dudley 2017.</p>
+    <p>Michael Dudley
+      <script>document.write(new Date().getFullYear())</script>.
+    </p>
     <p>Website designed and maintained by Ulli Bodnar.</p>
     <a href="sitemap/">Sitemap</a>
   </div>
