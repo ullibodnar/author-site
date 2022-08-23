@@ -2,10 +2,18 @@ const expand = document.querySelector('.expand-button')
 const expandText = document.querySelector('#expand-text')
 const expandImage = document.querySelector('span.glyphicon')
 const nexusAnnouncement = document.querySelector('.scrollableannouncements')
-const frontButton = document.querySelector('#front-button')
-const backButton = document.querySelector('#back-button')
-const frontImage = document.querySelector('#front-image')
-const backImage = document.querySelector('#back-image')
+
+const frontButtonNexus = document.querySelector('#front-button-nexus')
+const backButtonNexus = document.querySelector('#back-button-nexus')
+const frontImageNexus = document.querySelector('#front-image-nexus')
+const backImageNexus = document.querySelector('#back-image-nexus')
+
+const frontButtonInterchange = document.querySelector(
+  '#front-button-interchange'
+)
+const backButtonInterchange = document.querySelector('#back-button-interchange')
+const frontImageInterchange = document.querySelector('#front-image-interchange')
+const backImageInterchange = document.querySelector('#back-image-interchange')
 
 const navToggle = document.querySelector('.nav-toggle')
 const nav = document.querySelector('.right-nav')
@@ -15,11 +23,18 @@ const onToggleNav = () => {
   nav.classList.toggle('toggled')
 }
 
-const onToggleFrontAndBackButton = () => {
-  frontButton.classList.toggle('active')
-  backButton.classList.toggle('active')
-  frontImage.classList.toggle('hidden')
-  backImage.classList.toggle('hidden')
+const onToggleFrontAndBackButtonInterchange = () => {
+  frontButtonInterchange.classList.toggle('active')
+  backButtonInterchange.classList.toggle('active')
+  frontImageInterchange.classList.toggle('hidden')
+  backImageInterchange.classList.toggle('hidden')
+}
+
+const onToggleFrontAndBackButtonNexus = () => {
+  frontButtonNexus.classList.toggle('active')
+  backButtonNexus.classList.toggle('active')
+  frontImageNexus.classList.toggle('hidden')
+  backImageNexus.classList.toggle('hidden')
 }
 
 const onExpand = () => {
@@ -51,5 +66,9 @@ mobileView.addListener(onMobile)
 
 navToggle.onclick = onToggleNav
 expand.onclick = onExpand
-frontButton.onclick = onToggleFrontAndBackButton
-backButton.onclick = onToggleFrontAndBackButton
+
+frontButtonNexus.onclick = onToggleFrontAndBackButtonNexus
+backButtonNexus.onclick = onToggleFrontAndBackButtonNexus
+
+frontButtonInterchange.onclick = onToggleFrontAndBackButtonInterchange
+backButtonInterchange.onclick = onToggleFrontAndBackButtonInterchange

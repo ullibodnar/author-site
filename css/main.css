@@ -42,6 +42,11 @@ p.stupid-text {
     margin-bottom: 25px;
 }
 
+.blue-italics {
+    color: #599ae2;
+    font-style: italic;
+}
+
 .red-italics {
     color: #fc3645;
     font-style: italic;
@@ -64,6 +69,11 @@ a:hover {
 a:visited {
     color: #fc3645;
 }
+
+a.blue {
+    color: #599ae2;
+}
+
 a.yellow {
     color: #eddc67;
 }
@@ -338,6 +348,9 @@ span.glyphicon.accent {
 }
 span.glyphicon.accent-yellow {
     color: #eddc67;
+}
+span.glyphicon.accent-blue {
+    color: #599ae2;
 }
 
 .footer {
