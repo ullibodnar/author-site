@@ -99,20 +99,7 @@ a.video-link:hover {
     display: none;
 }
 
-.material-image {
-    position: inherit;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-    z-index: 1;
-}
 
-.material-image:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-.material-image.hidden {
-    display: none;
-}
 
 .image-switcher-buttons {
     display: flex;
@@ -232,6 +219,24 @@ ul.sitemap-list {
     -moz-box-shadow: 0px 7px 15px -6px rgba(0, 0, 0, 0.50);
     box-shadow: 0px 7px 15px -6px rgba(0, 0, 0, 0.50);
     border-radius: 5px;
+    min-height: 450px;
+}
+
+.material-image {
+    height: inherit;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    z-index: 1;
+    display: block;
+    max-height: 100%;
+}
+
+.material-image:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.material-image.hidden {
+    display: none;
 }
 
 .material h1 {
@@ -244,6 +249,12 @@ ul.sitemap-list {
     color: #abb2bf;
 }
 
+.book-preview-image {
+    float: left;
+    height: 400px;
+    margin: 0px 20px 60px 0px;
+}
+
 div.image-book {
     height: 800px;
     background: url(../assets/images/pilgrimage-book-cover.JPG);
@@ -251,6 +262,10 @@ div.image-book {
     background-repeat: no-repeat;
     background-attachment: none;
     background-size: cover;
+}
+
+.nowrap {
+    white-space: nowrap;
 }
 
 div.space {
@@ -556,5 +571,15 @@ p.timestamp {
         border-left: 3px solid #fc3645;
     }
 
+    .book-preview-image {
+        width: 100%;
+        height: auto;
+        margin: 0px 0px 10px 0px;
+    }
+
+    .material-image {
+        width: 100%;
+        height: auto;
+    }
     
 }
