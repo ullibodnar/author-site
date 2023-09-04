@@ -3,6 +3,19 @@ const expandText = document.querySelector('#expand-text')
 const expandImage = document.querySelector('span.glyphicon')
 const nexusAnnouncement = document.querySelector('.scrollableannouncements')
 
+const frontButtonJourneyOngoing = document.querySelector(
+  '#front-button-journey-ongoing'
+)
+const backButtonJourneyOngoing = document.querySelector(
+  '#back-button-journey-ongoing'
+)
+const frontImageJourneyOngoing = document.querySelector(
+  '#front-image-journey-ongoing'
+)
+const backImageJourneyOngoing = document.querySelector(
+  '#back-image-journey-ongoing'
+)
+
 const frontButtonNexus = document.querySelector('#front-button-nexus')
 const backButtonNexus = document.querySelector('#back-button-nexus')
 const frontImageNexus = document.querySelector('#front-image-nexus')
@@ -21,6 +34,13 @@ const nav = document.querySelector('.right-nav')
 const onToggleNav = () => {
   navToggle.classList.toggle('toggled')
   nav.classList.toggle('toggled')
+}
+
+const onToggleFrontAndBackButtonJourneyOngoing = () => {
+  frontButtonJourneyOngoing.classList.toggle('active')
+  backButtonJourneyOngoing.classList.toggle('active')
+  frontImageJourneyOngoing.classList.toggle('hidden')
+  backImageJourneyOngoing.classList.toggle('hidden')
 }
 
 const onToggleFrontAndBackButtonInterchange = () => {
@@ -72,3 +92,6 @@ backButtonNexus.onclick = onToggleFrontAndBackButtonNexus
 
 frontButtonInterchange.onclick = onToggleFrontAndBackButtonInterchange
 backButtonInterchange.onclick = onToggleFrontAndBackButtonInterchange
+
+frontButtonJourneyOngoing.onclick = onToggleFrontAndBackButtonJourneyOngoing
+backButtonJourneyOngoing.onclick = onToggleFrontAndBackButtonJourneyOngoing

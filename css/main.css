@@ -56,6 +56,11 @@ p.stupid-text {
     font-style: italic;
 }
 
+.brown-italics {
+    color: #bc946d;
+    font-style: italic;
+}
+
 a {
     color: #fc3645;
     text-decoration: underline;
@@ -76,6 +81,10 @@ a.blue {
 
 a.yellow {
     color: #eddc67;
+}
+
+a.brown {
+    color: #bc946d;
 }
 
 a.yellow:hover {
@@ -303,6 +312,12 @@ div.space {
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
+.journals-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .video-wrapper {
     overflow: hidden;
     background: #2f2f2f;
@@ -368,6 +383,9 @@ span.glyphicon.accent-yellow {
 }
 span.glyphicon.accent-blue {
     color: #599ae2;
+}
+span.glyphicon.accent-brown {
+    color: #bc946d;
 }
 
 .footer {
