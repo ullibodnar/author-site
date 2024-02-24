@@ -485,7 +485,6 @@ p.timestamp {
     .nav-toggle {
         display: block;
         position: fixed;
-        width: 90px;
         height: calc(1.5em + 20px);
         padding: 10px 0px;
         background: white;
@@ -515,6 +514,7 @@ p.timestamp {
         font-size: 1.5em;
         line-height: .75em;
         transition: opacity .2s ease;
+        margin: 0 20px;
       }
       
       .nav-line {
@@ -544,7 +544,7 @@ p.timestamp {
       }
       
       .nav-toggle.toggled .nav-line.left {
-        transform: translate(27.5px, 0) rotate(45deg) scale(2, 1) ;
+        transform: translate(35px, 0) rotate(45deg) scale(2, 1) ;
         border-radius: 1px;
       }
       
@@ -553,7 +553,7 @@ p.timestamp {
       }
       
       .nav-toggle.toggled .nav-line.right {
-        transform: translate(-27.5px, 0) rotate(-45deg) scale(2, 1) ;
+        transform: translate(-35px, 0) rotate(-45deg) scale(2, 1) ;
         border-radius: 1px;
       }
 
