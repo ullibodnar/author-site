@@ -4,7 +4,7 @@
     padding: 0px;
     margin: 0px;
     line-height: 1.5;
-    letter-spacing: .2rem;
+    letter-spacing: .17rem;
     font-weight: 400;
 }
 /* 
@@ -544,7 +544,7 @@ p.timestamp {
       }
       
       .nav-toggle.toggled .nav-line.left {
-        transform: translate(35px, 0) rotate(45deg) scale(2, 1) ;
+        transform: translate(34px, 0) rotate(45deg) scale(2, 1) ;
         border-radius: 1px;
       }
       
@@ -553,7 +553,7 @@ p.timestamp {
       }
       
       .nav-toggle.toggled .nav-line.right {
-        transform: translate(-35px, 0) rotate(-45deg) scale(2, 1) ;
+        transform: translate(-34px, 0) rotate(-45deg) scale(2, 1) ;
         border-radius: 1px;
       }
 
