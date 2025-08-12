@@ -65,6 +65,11 @@ p.stupid-text {
     font-style: italic;
 }
 
+.green-italics {
+    color: #559a5c;
+    font-style: italic;
+}
+
 a {
     color: #fc3645;
     text-decoration: underline;
@@ -89,6 +94,10 @@ a.yellow {
 
 a.brown {
     color: #bc946d;
+}
+
+a.green {
+    color: #559a5c;
 }
 
 a.yellow:hover {
@@ -390,6 +399,10 @@ span.glyphicon.accent-blue {
 }
 span.glyphicon.accent-brown {
     color: #bc946d;
+}
+
+span.glyphicon.accent-green {
+    color: #559a5c;
 }
 
 .footer {

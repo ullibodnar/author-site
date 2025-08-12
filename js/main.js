@@ -3,6 +3,19 @@ const expandText = document.querySelector('#expand-text')
 const expandImage = document.querySelector('span.glyphicon')
 const nexusAnnouncement = document.querySelector('.scrollableannouncements')
 
+const frontButtonSymmetries = document.querySelector(
+  '#front-button-symmetries'
+)
+const backButtonSymmetries = document.querySelector(
+  '#back-button-symmetries'
+)
+const frontImageSymmetries = document.querySelector(
+  '#front-image-symmetries'
+)
+const backImageSymmetries = document.querySelector(
+  '#back-image-symmetries'
+)
+
 const frontButtonJourneyOngoing = document.querySelector(
   '#front-button-journey-ongoing'
 )
@@ -34,6 +47,13 @@ const nav = document.querySelector('.right-nav')
 const onToggleNav = () => {
   navToggle.classList.toggle('toggled')
   nav.classList.toggle('toggled')
+}
+
+const onToggleFrontAndBackButtonSymmetries = () => {
+  frontButtonSymmetries.classList.toggle('active')
+  backButtonSymmetries.classList.toggle('active')
+  frontImageSymmetries.classList.toggle('hidden')
+  backImageSymmetries.classList.toggle('hidden')
 }
 
 const onToggleFrontAndBackButtonJourneyOngoing = () => {
@@ -86,6 +106,9 @@ mobileView.addListener(onMobile)
 
 navToggle.onclick = onToggleNav
 expand.onclick = onExpand
+
+frontButtonSymmetries.onclick = onToggleFrontAndBackButtonSymmetries
+backButtonSymmetries.onclick = onToggleFrontAndBackButtonSymmetries
 
 frontButtonNexus.onclick = onToggleFrontAndBackButtonNexus
 backButtonNexus.onclick = onToggleFrontAndBackButtonNexus
