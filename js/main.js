@@ -41,6 +41,13 @@ const backButtonInterchange = document.querySelector('#back-button-interchange')
 const frontImageInterchange = document.querySelector('#front-image-interchange')
 const backImageInterchange = document.querySelector('#back-image-interchange')
 
+const frontButtonPilgrimage = document.querySelector(
+  '#front-button-pilgrimage'
+)
+const backButtonPilgrimage = document.querySelector('#back-button-pilgrimage')
+const frontImagePilgrimage = document.querySelector('#front-image-pilgrimage')
+const backImagePilgrimage = document.querySelector('#back-image-pilgrimage')
+
 const navToggle = document.querySelector('.nav-toggle')
 const nav = document.querySelector('.right-nav')
 
@@ -75,6 +82,13 @@ const onToggleFrontAndBackButtonNexus = () => {
   backButtonNexus.classList.toggle('active')
   frontImageNexus.classList.toggle('hidden')
   backImageNexus.classList.toggle('hidden')
+}
+
+const onToggleFrontAndBackButtonPilgrimage = () => {
+  frontButtonPilgrimage.classList.toggle('active')
+  backButtonPilgrimage.classList.toggle('active')
+  frontImagePilgrimage.classList.toggle('hidden')
+  backImagePilgrimage.classList.toggle('hidden')
 }
 
 const onExpand = () => {
@@ -118,3 +132,6 @@ backButtonInterchange.onclick = onToggleFrontAndBackButtonInterchange
 
 frontButtonJourneyOngoing.onclick = onToggleFrontAndBackButtonJourneyOngoing
 backButtonJourneyOngoing.onclick = onToggleFrontAndBackButtonJourneyOngoing
+
+frontButtonPilgrimage.onclick = onToggleFrontAndBackButtonPilgrimage
+backButtonPilgrimage.onclick = onToggleFrontAndBackButtonPilgrimage
